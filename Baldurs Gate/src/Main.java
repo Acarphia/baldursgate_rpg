@@ -39,7 +39,6 @@ public class Main {
         } while (opcao != 5);
     }
 
-    // Metodo para criar personagem inicial
     private static Personagem criarPersonagemInicial() {
         System.out.println("\nCriando personagem inicial (carga do sistema)...");
         return new Personagem("Impulso Sombrio", "Draconiano", 110, 40);
@@ -80,6 +79,8 @@ public class Main {
         System.out.println("6. Feiticeiro");
         System.out.println("7. Bruxo");
         System.out.println("8. Bardo");
+        System.out.println("9. Bardo (Colégio da Sabedoria)");
+        System.out.println("10. Clérigo (Domínio da Luz)");
         System.out.print("Escolha uma classe: ");
 
         int escolha = scanner.nextInt();
@@ -110,6 +111,20 @@ public class Main {
             case 8:
                 personagemAtual = personagemAtual.promoverParaBardo();
                 break;
+            case 9:
+                if (personagemAtual instanceof Bardo) {
+                    personagemAtual = new BardoColegioSabedoria((Bardo) personagemAtual);
+                } else {
+                    System.out.println("Apenas Bardos podem entrar no Colégio da Sabedoria!");
+                }
+                break;
+            case 10:
+                if (personagemAtual instanceof Clerigo) {
+                    personagemAtual = new ClerigoDominioLuz((Clerigo) personagemAtual);
+                } else {
+                    System.out.println("Apenas Clérigos podem seguir o Domínio da Luz!");
+                }
+                break;
             default:
                 System.out.println("Classe inválida!");
         }
@@ -117,7 +132,36 @@ public class Main {
 
     private static void usarHabilidades() {
         System.out.println("\n- HABILIDADES -");
-        if (personagemAtual instanceof Clerigo) {
+        if (personagemAtual instanceof ClerigoDominioLuz) {
+            ClerigoDominioLuz clerigoLuz = (ClerigoDominioLuz) personagemAtual;
+            System.out.println("1. Invocar Chama Sagrada");
+            System.out.println("2. Barreira de Luz");
+            System.out.println("3. Curar");
+            System.out.print("Escolha: ");
+            int escolha = scanner.nextInt();
+
+            if (escolha == 1) {
+                clerigoLuz.invocarChamaSagrada();
+            } else if (escolha == 2) {
+                System.out.println(clerigoLuz.getNome() + " cria uma barreira de luz!");
+            } else {
+                clerigoLuz.curar();
+            }
+        }
+        else if (personagemAtual instanceof BardoColegioSabedoria) {
+            BardoColegioSabedoria bardoSabedoria = (BardoColegioSabedoria) personagemAtual;
+            System.out.println("1. Palavra Cortante");
+            System.out.println("2. Inspiração Superior");
+            System.out.print("Escolha: ");
+            int escolha = scanner.nextInt();
+
+            if (escolha == 1) {
+                bardoSabedoria.cortantePalavra();
+            } else {
+                bardoSabedoria.inspirar();
+            }
+        }
+        else if (personagemAtual instanceof Clerigo) {
             Clerigo clerigo = (Clerigo) personagemAtual;
             System.out.println("1. Curar ferimentos");
             System.out.println("2. Atacar com símbolo");
@@ -167,13 +211,21 @@ public class Main {
         System.out.println("Vida: " + personagemAtual.getVida());
         System.out.println("Mana: " + personagemAtual.getMana());
 
-        if (personagemAtual instanceof Clerigo) {
+        if (personagemAtual instanceof ClerigoDominioLuz) {
+            System.out.println("Classe: Clérigo (Domínio da Luz)");
+            System.out.println("Divindade: " + ((Clerigo) personagemAtual).getDivindade());
+        }
+        else if (personagemAtual instanceof BardoColegioSabedoria) {
+            System.out.println("Classe: Bardo (Colégio da Sabedoria)");
+            System.out.println("Inspirações: " + ((Bardo) personagemAtual).getInspiracao());
+        }
+        else if (personagemAtual instanceof Clerigo) {
             System.out.println("Classe: Clérigo");
             System.out.println("Divindade: " + ((Clerigo) personagemAtual).getDivindade());
         }
         else if (personagemAtual instanceof Bardo) {
             System.out.println("Classe: Bardo");
-            System.out.println("Inspirações: " + ((Bardo)personagemAtual).getInspiracao());
+            System.out.println("Inspirações: " + ((Bardo) personagemAtual).getInspiracao());
         }
         else {
             System.out.println("Classe: Aventureiro (não especializado)");

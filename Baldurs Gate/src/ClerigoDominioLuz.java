@@ -1,7 +1,6 @@
 // Subclasse Clerigo do Dominio da Luz (herda de Clerigo)
 public class ClerigoDominioLuz extends Clerigo {
     private int chamaSagrada; // Cargas de Chama Sagrada
-
     public ClerigoDominioLuz(Clerigo clerigo) {
         super(clerigo);
         this.chamaSagrada = 1;

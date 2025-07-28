@@ -1,4 +1,4 @@
-//Subclasse Bardo do Colegio da Sabedoria (herda de Bardo)
+// Subclasse Bardo do Colegio da Sabedoria (herda de Bardo)
 public class BardoColegioSabedoria extends Bardo {
     private int inspiracaoSuperior; // Habilidade que pode ser usada por descanso
     public BardoColegioSabedoria(Bardo bardo) {

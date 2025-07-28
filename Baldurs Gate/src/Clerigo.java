@@ -15,7 +15,7 @@ public class Clerigo extends Personagem {
             vida = Math.min(vida + 25, vidaMax);
             System.out.println(nome + " invoca a luz de " + divindade + " para curar!");
         } else {
-            System.out.println("Mana insuficiente para curar!");
+            System.out.println("A luz se apaga sem que o ferimento se cure! (Sem mana para curar com luz)");
         }
     }
 

@@ -392,7 +392,7 @@ public class Main {
         }
         else if (personagemAtual instanceof ClerigoDominioLuz) {
             System.out.println("Classe: Clérigo (Domínio da Luz)");
-            System.out.println("Chama Sagrada restante: " + ((Clerigo) personagemAtual).getChamaSagrada());
+            System.out.println("Divindade: " + ((Clerigo) personagemAtual).getDivindade());
         }
         else if (personagemAtual instanceof Clerigo) {
             System.out.println("Classe: Clérigo");

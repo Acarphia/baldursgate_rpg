@@ -55,18 +55,23 @@ public class Main {
     }
 
     private static void criarNovoPersonagem() {
-        System.out.println("\n- NOVO PERSONAGEM -");
-        System.out.println("Raças disponíveis: " + Personagem.listarRacas());
+    System.out.println("\n- NOVO PERSONAGEM -");
+    System.out.println("Raças disponíveis: " + Personagem.listarRacas());
 
-        System.out.print("Nome: ");
-        String nome = scanner.nextLine();
+    System.out.print("Nome: ");
+    String nome = scanner.nextLine();
 
-        System.out.print("Raça: ");
-        String raca = scanner.nextLine();
+    System.out.print("Raça: ");
+    String raca = scanner.nextLine();
 
-        personagemAtual = new Personagem(nome, raca, 100, 30);
-        System.out.println("Personagem criado com sucesso!");
+    if (!Personagem.listarRacas().contains(raca)) {
+        System.out.println("Raça inválida! Personagem não criado.");
+        return;
     }
+
+    personagemAtual = new Personagem(nome, raca, 100, 30);
+    System.out.println("Personagem criado com sucesso!");
+}
 
     private static void promoverPersonagem() {
         System.out.println("\n- PROMOÇÃO -");
@@ -86,7 +91,7 @@ public class Main {
         System.out.print("Escolha uma classe: ");
 
         int escolha = scanner.nextInt();
-        scanner.nextLine(); // Limpar buffer
+        scanner.nextLine();
 
         switch (escolha) {
             case 1:
@@ -163,6 +168,7 @@ public class Main {
             System.out.println("2. Usar Golpe Crítico");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 gCamp.usarFuria();
@@ -176,6 +182,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 g.usarFuria();
@@ -189,6 +196,7 @@ public class Main {
             System.out.println("2. Dança das Sombras");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 aS.ataqueFurtivo();
@@ -202,6 +210,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 a.ataqueFurtivo();
@@ -215,6 +224,7 @@ public class Main {
             System.out.println("2. Usar Sopro Dracônico");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 fD.conjurarRaioCaos();
@@ -228,6 +238,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 f.conjurarRaioCaos();
@@ -241,6 +252,7 @@ public class Main {
             System.out.println("2. Evocar Elemental");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 mE.lancarMisseis();
@@ -254,6 +266,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 m.lancarMisseis();
@@ -267,6 +280,7 @@ public class Main {
             System.out.println("2. Curar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 cL.invocarChamaSagrada();
@@ -280,6 +294,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 c.curar();
@@ -293,6 +308,7 @@ public class Main {
             System.out.println("2. Inspiração Superior");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 bC.cortantePalavra();
@@ -306,6 +322,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine()
 
             if (escolha == 1) {
                 b.inspirar();

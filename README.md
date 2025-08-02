@@ -1,1 +1,0 @@
-# baldursgate_rpg

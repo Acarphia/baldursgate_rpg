@@ -1,6 +1,6 @@
 //Feito por Luiza Vieira Pavarina - 12411GIN047
 //Marcos Paulo Alves - 12311GIN022
-//Ana Clara - 
+//Ana Clara Fagundes Curcino - 12321BSI279
 
 import java.util.Scanner;
 

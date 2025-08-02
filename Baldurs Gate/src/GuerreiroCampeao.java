@@ -1,8 +1,8 @@
 // Subclasse Guerreiro Campeão (herda de Guerreiro)
-public class GuerreiroCampeão extends Guerreiro {
+public class GuerreiroCampeao extends Guerreiro {
     private int golpesCriticos; // Cargas da habilidade Golpe Crítico
 
-    public GuerreiroCampeão(Guerreiro guerreiro) {
+    public GuerreiroCampeao(Guerreiro guerreiro) {
         super(guerreiro);
         this.golpesCriticos = 1; // Inicia com 1 carga
         this.habilidades.add("Golpe Crítico (1 carga)");

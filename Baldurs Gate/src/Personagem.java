@@ -89,5 +89,8 @@ public class Personagem {
     public String getRaca() { return raca; }
     public int getVida() { return vida; }
     public int getMana() { return mana; }
+    public int getVidaMax() { return vidaMax; }
+    public int getManaMax() { return manaMax; }
 
 }
+

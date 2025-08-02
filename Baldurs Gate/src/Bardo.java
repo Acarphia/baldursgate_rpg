@@ -21,7 +21,7 @@ public class Bardo extends Personagem {
     // Sobrescritas
     @Override
     public void atacar() {
-        System.out.println(nome + " toda os acordes dissonantes do alaúde!");
+        System.out.println(nome + " toca os acordes dissonantes do alaúde!");
     }
 
     @Override
@@ -36,4 +36,5 @@ public class Bardo extends Personagem {
     public int getInspiracao() {
         return inspiracao;
     }
+
 }

@@ -4,7 +4,7 @@ public class Guerreiro extends Personagem {
     private int furia;
 
     public Guerreiro(Personagem personagem) {
-        super(personagem.getNome(), personagem.getRaca(), personagem.getVidaMax() + 20, personagem.getManaMax() + 10);
+        super(personagem.getNome(), personagem.getRaca(), personagem.vidaMax + 20, personagem.manaMax + 10);
         this.furia = 3;
         this.habilidades.add("Fúria (1 carga)");
         this.habilidades.add("Ataque Poderoso (10 mana)");

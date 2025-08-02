@@ -28,4 +28,8 @@ public class BardoColegioSabedoria extends Bardo {
             System.out.println(nome + " está rouco! (Sem cargas de inspiração superior)");
         }
     }
+
+    public int getInspiracaoSuperior() {
+        return inspiracaoSuperior;
+    }
 }

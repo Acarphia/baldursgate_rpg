@@ -29,4 +29,8 @@ public class ClerigoDominioLuz extends Clerigo {
             System.out.println("A luz se apaga sem que o ferimento se cure! (Sem mana para curar com luz)");
         }
     }
+
+    public int getChamaSagrada() {
+    return chamaSagrada;
+}
 }

@@ -1,3 +1,7 @@
+//Feito por Luiza Vieira Pavarina - 12411GIN047
+//Marcos Paulo Alves - 12311GIN022
+//Ana Clara - 
+
 import java.util.Scanner;
 
 public class Main {

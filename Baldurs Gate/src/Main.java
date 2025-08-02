@@ -19,7 +19,7 @@ public class Main {
         do {
             exibirMenu();
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -172,7 +172,7 @@ public class Main {
             System.out.println("2. Usar Golpe Crítico");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 gCamp.usarFuria();
@@ -186,7 +186,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 g.usarFuria();
@@ -200,7 +200,7 @@ public class Main {
             System.out.println("2. Dança das Sombras");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 aS.ataqueFurtivo();
@@ -214,7 +214,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 a.ataqueFurtivo();
@@ -228,7 +228,7 @@ public class Main {
             System.out.println("2. Usar Sopro Dracônico");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 fD.conjurarRaioCaos();
@@ -242,7 +242,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 f.conjurarRaioCaos();
@@ -256,7 +256,7 @@ public class Main {
             System.out.println("2. Evocar Elemental");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 mE.lancarMisseis();
@@ -270,8 +270,8 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
-
+            scanner.nextLine();
+            
             if (escolha == 1) {
                 m.lancarMisseis();
             } else {
@@ -284,7 +284,7 @@ public class Main {
             System.out.println("2. Curar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 cL.invocarChamaSagrada();
@@ -298,7 +298,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 c.curar();
@@ -312,7 +312,7 @@ public class Main {
             System.out.println("2. Inspiração Superior");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 bC.cortantePalavra();
@@ -326,7 +326,7 @@ public class Main {
             System.out.println("2. Atacar");
             System.out.print("Escolha: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine()
+            scanner.nextLine();
 
             if (escolha == 1) {
                 b.inspirar();

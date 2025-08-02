@@ -103,7 +103,7 @@ public class Main {
                 break;
             case 2:
                 if (personagemAtual instanceof Guerreiro) {
-                    personagemAtual = new GuerreiroCampeão((Guerreiro) personagemAtual);
+                    personagemAtual = new GuerreiroCampeao((Guerreiro) personagemAtual);
                 } else {
                     System.out.println("Apenas Guerreiros podem virar Campeões!");
                 }
@@ -166,8 +166,8 @@ public class Main {
     private static void usarHabilidades() {
         System.out.println("\n- HABILIDADES -");
 
-        if (personagemAtual instanceof GuerreiroCampeão) {
-            GuerreiroCampeão gCamp = (GuerreiroCampeão) personagemAtual;
+        if (personagemAtual instanceof GuerreiroCampeao) {
+            GuerreiroCampeao gCamp = (GuerreiroCampeao) personagemAtual;
             System.out.println("1. Usar Fúria");
             System.out.println("2. Usar Golpe Crítico");
             System.out.print("Escolha: ");
@@ -358,9 +358,9 @@ public class Main {
         System.out.println("Vida: " + personagemAtual.getVida() + "/" + personagemAtual.getVidaMax());
         System.out.println("Mana: " + personagemAtual.getMana() + "/" + personagemAtual.getManaMax());
 
-        if (personagemAtual instanceof GuerreiroCampeão) {
+        if (personagemAtual instanceof GuerreiroCampeao) {
             System.out.println("Classe: Guerreiro Campeão");
-            System.out.println("Fúria restante: " + ((GuerreiroCampeão) personagemAtual).getFuria());
+            System.out.println("Fúria restante: " + ((GuerreiroCampeao) personagemAtual).getFuria());
         }
         else if (personagemAtual instanceof Guerreiro) {
             System.out.println("Classe: Guerreiro");

@@ -12,7 +12,7 @@ public class ClerigoDominioLuz extends Clerigo {
     public void invocarChamaSagrada() {
         if (chamaSagrada > 0) {
             chamaSagrada--;
-            System.out.println(nome + " invoca a Chama Sagrada de " + divindade + ", queimando inimigos com luz divina!");
+            System.out.println(nome + " invoca a Chama Sagrada de " + getDivindade() + ", queimando inimigos com luz divina!");
         } else {
             System.out.println(nome + " tenta conjurar a chama e se queima! (Sem cargas de chama sagrada)");
         }
@@ -24,7 +24,7 @@ public class ClerigoDominioLuz extends Clerigo {
         if (mana >= 10) {
             mana -= 10;
             vida = Math.min(vida + 30, vidaMax); // Cura melhorada (+30)
-            System.out.println(nome + " canaliza a luz de " + divindade + ", curando ferimentos com brilho intenso!");
+            System.out.println(nome + " canaliza a luz de " + getDivindade() + ", curando ferimentos com brilho intenso!");
         } else {
             System.out.println("A luz se apaga sem que o ferimento se cure! (Sem mana para curar com luz)");
         }

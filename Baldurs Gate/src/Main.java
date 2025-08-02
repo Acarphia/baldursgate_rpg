@@ -167,7 +167,7 @@ public class Main {
         System.out.println("\n- HABILIDADES -");
 
         if (personagemAtual instanceof GuerreiroCampeao) {
-            GuerreiroCampeao gCamp = (GuerreiroCampeao) personagemAtual;
+            GuerreiroCampeao gC = (GuerreiroCampeao) personagemAtual;
             System.out.println("1. Usar Fúria");
             System.out.println("2. Usar Golpe Crítico");
             System.out.print("Escolha: ");
@@ -175,9 +175,9 @@ public class Main {
             scanner.nextLine();
 
             if (escolha == 1) {
-                gCamp.usarFuria();
+                gC.usarFuria();
             } else if (escolha == 2) {
-                gCamp.usarGolpeCritico();
+                gC.usarGolpeCritico();
             }
         }
         else if (personagemAtual instanceof Guerreiro) {

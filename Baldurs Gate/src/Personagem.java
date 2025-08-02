@@ -60,11 +60,6 @@ public class Personagem {
         return new Guerreiro(this);
     }
 
-    public Barbaro promoverParaBarbaro() {
-        System.out.println(nome + " agora é um Bárbaro!");
-        return new Barbaro(this);
-    }
-
     public Assassino promoverParaAssassino() {
         System.out.println(nome + " agora é um Assassino!");
         return new Assassino(this);
@@ -85,11 +80,6 @@ public class Personagem {
         return new Feiticeiro(this);
     }
 
-    public Bruxo promoverParaBruxo() {
-        System.out.println(nome + " agora é um Bruxo!");
-        return new Bruxo(this);
-    }
-
     public Bardo promoverParaBardo() {
         System.out.println(nome + " agora é um Bardo!");
         return new Bardo(this);
@@ -99,4 +89,5 @@ public class Personagem {
     public String getRaca() { return raca; }
     public int getVida() { return vida; }
     public int getMana() { return mana; }
+
 }
